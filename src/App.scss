@@ -1,0 +1,124 @@
+$text_color: #757575;
+$headers_color: #646464;
+$soft_bg: #f3f3f3;
+$middle_bg: #cfd8dc;
+$cta_bg: #7b8d93;
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	max-width: 1200px;
+	margin: 20px auto 0;
+	display: flex;
+	justify-content: space-between;
+	color: $text_color;
+
+	.game_wrapper {
+		width: 50%;
+		height: 100%;
+
+		.game_tools {
+			width: 100%;
+			text-align: center;
+
+			select {
+				appearance: none;
+				height: 2.5rem;
+				width: 30%;
+				max-width: 150px;
+				text-indent: 10px;
+				color: $text_color;
+				background-color: $middle_bg;
+				position: relative;
+				outline: none;
+				border: none;
+				border-radius: 5px;
+				font-weight: bolder;
+				cursor: pointer;
+				margin: 10px;
+
+				&:focus {
+					border-radius: 5px 5px 0 0;
+				}
+			}
+			.player_name {
+				width: 35%;
+				height: 2.5rem;
+				max-width: 300px;
+				outline: none;
+				border: none;
+				border-radius: 2px;
+				background: $soft-bg;
+				text-indent: 10px;
+				font-weight: bolder;
+				margin: 10px;
+			}
+			.play {
+				width: 20%;
+				height: 2.5rem;
+				max-width: 100px;
+				color: #fff;
+				font-weight: bolder;
+				background: $cta-bg;
+				outline: none;
+				border: none;
+				border-radius: 5px;
+				margin: 10px;
+				cursor: pointer;
+			}
+			.winner_name {
+				display: block;
+				margin: 0 auto;
+				font-size: 1.5rem;
+				font-weight: bolder;
+				color: $headers_color;
+				text-align: center;
+			}
+		}
+
+		.field_wrapper {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+
+			table {
+				width: 100%;
+				height: 100%;
+				min-width: 300px;
+				min-height: 300px;
+				max-width: 550px;
+				max-height: 550px;
+				margin-top: 2rem;
+				border-color: $middle_bg;
+
+				td {
+					user-select: none;
+				}
+			}
+		}
+	}
+	.leader_board_wrapper {
+		width: 50%;
+
+		.leader_board {
+			width: 80%;
+			margin: 0 auto;
+
+			.leader_board_header {
+				font-weight: bolder;
+				font-size: 1.5rem;
+				text-align: center;
+				margin-bottom: 40px;
+				color: $headers_color;
+			}
+			.leader_board_winner {
+				display: flex;
+				justify-content: space-between;
+				background: $middle_bg;
+				margin: 3px;
+				padding: 10px;
+			}
+		}
+	}
+}
